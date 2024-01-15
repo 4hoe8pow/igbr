@@ -1,0 +1,14 @@
+jaka:
+    type: Web
+    title: カバディとは
+    author: 一般社団法人日本カバディ協会
+    url: https://www.jaka.jp/
+    date: 2023-11-02
+
+harry:
+    type: Book
+    title: Harry Potter and the Order of the Phoenix
+    author: Rowling, J. K.
+    volume: 5
+    page-total: 768
+    date: 2003-06-21
