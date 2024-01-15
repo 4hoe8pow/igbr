@@ -11,12 +11,25 @@
 #outline(indent: auto)
 #set page(columns: 2)
 
+= Console
 #include "articles/shell-work/cui.typ"
+
+= Algorithm
 #include "articles/algo/sort.typ"
+
+= Rust
 #include "articles/rust/syntax.typ"
+
+= Quality Control
 #include "articles/tdd/test.typ"
+
+= Entity Component System
 #include "articles/bevy/ecs.typ"
+
+= Web
 #include "articles/web/html.typ"
+
+= Technical Writing
 #include "articles/technical-writing/sakubun.typ"
 
 #bibliography("bib.yml")
