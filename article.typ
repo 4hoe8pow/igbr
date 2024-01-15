@@ -23,6 +23,9 @@
 = Quality Control
 #include "articles/tdd/test.typ"
 
+= Git
+#include "articles/git/git.typ"
+
 = Entity Component System
 #include "articles/bevy/ecs.typ"
 
