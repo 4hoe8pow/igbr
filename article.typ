@@ -29,6 +29,9 @@
 = Web
 #include "articles/web/html.typ"
 
+= Database
+#include "articles/database/sql.typ"
+
 = Technical Writing
 #include "articles/technical-writing/sakubun.typ"
 
