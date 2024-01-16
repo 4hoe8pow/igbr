@@ -14,8 +14,9 @@
 
 // 要旨::Abstract
 #include "articles/abstract.typ"
+
 // 目次::Contents
-#outline(indent: auto)
+#outline(indent: auto, depth: 2)
 #set page(columns: 1)
 
 = Console

@@ -10,17 +10,18 @@
 // 要旨::Abstract
 #include "articles/abstract.typ"
 // 目次::Contents
-#outline(indent: auto)
+#outline(indent: auto, depth: 2)
 #set page(columns: 2)
 
 = Console
 #include "articles/shell-work/cui.typ"
-
-= Algorithm
-#include "articles/algo/sort.typ"
+#include "articles/shell-work/cmd.typ"
 
 = Rust
 #include "articles/rust/syntax.typ"
+
+= Algorithm
+#include "articles/algo/sort.typ"
 
 = Quality Control
 #include "articles/tdd/test.typ"
