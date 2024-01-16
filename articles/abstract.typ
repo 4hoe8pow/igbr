@@ -2,7 +2,7 @@
 #import "../const.typ"
 
 #dropcap(
-  height: 2,
+  height: 4,
   justify: true,
   gap: 4pt,
   hanging-indent: 1em,

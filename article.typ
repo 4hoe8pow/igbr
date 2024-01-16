@@ -21,6 +21,9 @@
 = Coding
 #include "articles/rust/syntax.typ"
 #include "articles/rust/ownership.typ"
+#include "articles/rust/async.typ"
+#include "articles/rust/struct.typ"
+#include "articles/rust/trait.typ"
 
 = Algorithm
 #include "articles/algo/sort.typ"
@@ -41,9 +44,11 @@
 = Web
 #include "articles/web/html.typ"
 #include "articles/web/scripts.typ"
+#include "articles/web/wasm.typ"
 
 = Database
 #include "articles/database/sql.typ"
+#include "articles/database/nosql.typ"
 
 = Technical Writing
 #include "articles/technical-writing/sakubun.typ"
