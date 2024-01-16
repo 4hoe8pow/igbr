@@ -1,4 +1,5 @@
 #import "@preview/droplet:0.2.0": dropcap
+#import "../const.typ"
 
 #dropcap(
   height: 2,

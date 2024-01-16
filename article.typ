@@ -16,18 +16,25 @@
 = Console
 #include "articles/shell-work/cui.typ"
 #include "articles/shell-work/cmd.typ"
+#include "articles/shell-work/reg.typ"
 
-= Rust
+= Coding
 #include "articles/rust/syntax.typ"
+#include "articles/rust/ownership.typ"
+
 
 = Algorithm
 #include "articles/algo/sort.typ"
+#include "articles/algo/search.typ"
+#include "articles/algo/backtracking.typ"
+#include "articles/algo/dp.typ"
 
 = Quality Control
 #include "articles/tdd/test.typ"
 
 = Git
 #include "articles/git/git.typ"
+#include "articles/git/branch.typ"
 
 = Entity Component System
 #include "articles/bevy/ecs.typ"
@@ -40,6 +47,8 @@
 
 = Technical Writing
 #include "articles/technical-writing/sakubun.typ"
+
+= Typst
 
 #bibliography("bib.yml")
 #set heading(numbering: none)

@@ -1,24 +1,21 @@
-#let setup(title: "", author: "", paper: "a4", body) = {
-  set document(author: author, title: title)
-  set page(paper: paper, numbering: "1", number-align: center, margin: 1in)
-  set text(font: ("Linux Libertine"), size: 10.5pt, lang: "jp")
-  set heading(numbering: "1.a")
-  align(center)[
-    #block(text(weight: 700, 1.75em, title))
-    #v(1em, weak: true)
-    #text(1.25em, author)
-  ]
+#import "const.typ"
+
+#let setup(title: const.title, author: const.me, paper: "a4", body) = {
+  import "@preview/ctheorems:1.1.0": *
+  import "@preview/chic-hdr:0.4.0": *
+  
+  show: thmrules
+  set document(author: author, title: title, keywords: "rust")
+  set text(font: ("Linux Libertine","Noto Sans"), size: 10.5pt, lang: "jp")
+  set heading(numbering: "I–1")
   set par(leading: 0.55em, first-line-indent: 1.8em, justify: true)
   show regex("[\\P{latin}&&[[:^ascii:]]][\\p{latin}[[:ascii:]]]|[\\p{latin}[[:ascii:]]][\\P{latin}&&[[:^ascii:]]]") : it => {
     let a = it.text.match(regex("(.)(.)"))
     a.captures.at(0)+h(0.25em)+a.captures.at(1)
   }
-  show "、": "，"
-  show "。": "．"
-
-  import "@preview/ctheorems:1.1.0": *
-  import "@preview/chic-hdr:0.4.0": *
-  show: thmrules
+  show "、": ", "
+  show "。": ". "
+ 
   show: chic.with(
   chic-footer(
     left-side: strong(
