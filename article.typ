@@ -1,4 +1,6 @@
 #import "templates.typ"
+#import "@preview/rose-pine:0.1.0": apply
+#show: apply(variant: "rose-pine-dawn")
 #import "const.typ"
 // 環境構築
 #show: templates.setup.with(

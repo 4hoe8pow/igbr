@@ -1,26 +1,51 @@
-#import "@preview/polylux:0.3.1": *
-#import themes.metropolis: *
-#show: metropolis-theme.with(aspect-ratio: "4-3") // "4-3" or "16-9"
-#set text(size: 24pt)
+#import "@preview/slydst:0.1.0": *
 #set text(font: "Fira Sans", weight: "light")
 #show math.equation: set text(font: "Fira Math")
-#set strong(delta: 100)
-#set par(justify: true)
 #let today = datetime.today()
 #import "const.typ"
-
-#title-slide(
+#show: slides.with(
   title: const.title,
-  author: const.me,
-  subtitle: "Shell / Rust",
+  subtitle: none,
   date: today.display("[month repr:long] [day], [year]"),
-  extra: "",
+  authors: (const.me,),
+  layout: "medium",
+  title-color: rgb("#3d9970"),
 )
 
-#slide(title: "コマンドとシェル")[
-  =  `yes`コマンドを実行し，下記の要領で停止せよ．
+// 要旨::Abstract
+#include "articles/abstract.typ"
+// 目次::Contents
+#outline(indent: auto)
+#set page(columns: 1)
 
-  + `Ctrl`+`c`キーを用いよ．
-  + 別のターミナルを起動し，`ps`，`grep`で`yes`コマンドのPIDを調べ，`kill`コマンドを用いよ．
-  + `top`コマンドを用いよ．
-]
+= Console
+#include "articles/shell-work/cui.typ"
+
++ `Ctrl`+`c`キーを用いよ．
++ 別のターミナルを起動し，`ps`，`grep`で`yes`コマンドのPIDを調べ，`kill`コマンドを用いよ．
++ `top`コマンドを用いよ．
+
+= Algorithm
+#include "articles/algo/sort.typ"
+
+= Rust
+#include "articles/rust/syntax.typ"
+
+= Quality Control
+#include "articles/tdd/test.typ"
+#include "articles/tdd/workflow.typ"
+
+= Git
+#include "articles/git/git.typ"
+
+= Entity Component System
+#include "articles/bevy/ecs.typ"
+
+= Web
+#include "articles/web/html.typ"
+
+= Database
+#include "articles/database/sql.typ"
+
+= Technical Writing
+#include "articles/technical-writing/sakubun.typ"

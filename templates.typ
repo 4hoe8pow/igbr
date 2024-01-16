@@ -1,6 +1,6 @@
 #let setup(title: "", author: "", paper: "a4", body) = {
   set document(author: author, title: title)
-  set page(paper: paper, numbering: "1", number-align: center, margin: 1.5in)
+  set page(paper: paper, numbering: "1", number-align: center, margin: 1in)
   set text(font: ("Linux Libertine"), size: 10.5pt, lang: "jp")
   set heading(numbering: "1.a")
   align(center)[
@@ -17,7 +17,22 @@
   show "。": "．"
 
   import "@preview/ctheorems:1.1.0": *
+  import "@preview/chic-hdr:0.4.0": *
   show: thmrules
+  show: chic.with(
+  chic-footer(
+    left-side: strong(
+        link("mailto:yu@tokunaga.dance", "yu@tokunaga.dance")
+    ),
+    right-side: chic-page-number()
+  ),
+  chic-header(
+    left-side: emph(chic-heading-name(fill: true)),
+  ),
+  chic-separator(1pt),
+  chic-offset(7pt),
+  chic-height(1.5cm)
+)
 
   body
 }
