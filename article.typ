@@ -22,7 +22,6 @@
 #include "articles/rust/syntax.typ"
 #include "articles/rust/ownership.typ"
 
-
 = Algorithm
 #include "articles/algo/sort.typ"
 #include "articles/algo/search.typ"
@@ -41,6 +40,7 @@
 
 = Web
 #include "articles/web/html.typ"
+#include "articles/web/scripts.typ"
 
 = Database
 #include "articles/database/sql.typ"

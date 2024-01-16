@@ -6,7 +6,7 @@
   
   show: thmrules
   set document(author: author, title: title, keywords: "rust")
-  set text(font: ("Linux Libertine","Noto Sans"), size: 10.5pt, lang: "jp")
+  set text(font: ("Cica"), size: 10.5pt, lang: "jp")
   set heading(numbering: "I–1")
   set par(leading: 0.55em, first-line-indent: 1.8em, justify: true)
   show regex("[\\P{latin}&&[[:^ascii:]]][\\p{latin}[[:ascii:]]]|[\\p{latin}[[:ascii:]]][\\P{latin}&&[[:^ascii:]]]") : it => {

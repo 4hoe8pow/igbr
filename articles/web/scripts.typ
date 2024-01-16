@@ -1,3 +1,21 @@
+#import "@preview/codly:0.2.0": *
+#set quote(block: true)
+
+#let icon(codepoint) = {
+  box(
+    height: 0.8em,
+    baseline: 0.05em,
+    image(codepoint)
+  )
+  h(0.1em)
+}
+
+#show: codly-init.with()
+#codly(languages: (
+  html: (name: "HTML", icon: icon("html5.svg"), color: rgb("#ff6a25")),
+))
+
+
 == JavaScript
 
 Javascriptは1995年にBrendan Eich氏によって開発された。
@@ -39,7 +57,15 @@ JavaScriptエンジンを含む、JavaScript実行環境をランタイムとい
 - Bun.sh(JavaScriptCoreを採用)
 - Deno(V8を採用)
 
-== JS in HTML
+== JavaScriptを動かしてみる
+
+任意のディレクトリで新規のHTMLファイルを作成する。
+```sh
+toucn index.html
+```
+
+以下はいわゆるトースト通知を実装したスクリプトである。
+このままコピー&ペーストし、`index.html`をWebブラウザで開くとJavaScriptの挙動を確認できる。JavaScriptが埋め込まれたHTMLファイルは、特別なコマンドや操作は必要とせず、Webブラウザに自動的に実行される。
 
 ```html
 <!DOCTYPE html>
@@ -47,27 +73,19 @@ JavaScriptエンジンを含む、JavaScript実行環境をランタイムとい
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Static Template</title>
+    <title>Exaple</title>
     <style>
-      .button {
-        font-size: 12px;
-        width: 170px;
-        height: 32px;
-      }
-
       #toast {
         display: flex;
         visibility: hidden;
         height: 60px;
         width: 300px;
         border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 3px;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
-
       #toast > p {
         margin: auto 8px;
         font-size: 14px;
@@ -89,10 +107,7 @@ JavaScriptエンジンを含む、JavaScript実行環境をランタイムとい
         const button = document.querySelector(".button");
 
         button.addEventListener("click", () => {
-          // Show toast
           toast.style.visibility = "visible";
-
-          // Hide toast after a few seconds
           setTimeout(function () {
             toast.style.visibility = "hidden";
           }, 3000);
@@ -102,5 +117,12 @@ JavaScriptエンジンを含む、JavaScript実行環境をランタイムとい
   </body>
 </html>
 ```
+
+`<script>`タグで囲まれている箇所がJavaScriptにあたる。
+本書では、JavaScriptのシンタックスについては触れないが、`Coding`セクションが理解できていれば問題ない。
+既に`Rust`がプログラミング言語の中で母国語のような存在に昇格できていれば，おそらく`JavaScript`もある一定レベルまで読むことができるだろう。
+
+また、上記のHTMLには最低限の`CSS`によってスタイリングされている。
+削除した場合にどのようなふるまいになるか，確認してみるといい。
 
 == DOM
