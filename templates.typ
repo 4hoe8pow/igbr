@@ -3,7 +3,7 @@
 #let setup(title: const.title, author: const.me, paper: "a4", body) = {
   import "@preview/ctheorems:1.1.0": *
   import "@preview/chic-hdr:0.4.0": *
-  
+  set quote(block: true)
   show: thmrules
   set document(author: author, title: title, keywords: "rust")
   set text(font: ("Cica"), size: 10.5pt, lang: "jp")
@@ -15,7 +15,7 @@
   }
   show "、": ", "
   show "。": ". "
- 
+
   show: chic.with(
   chic-footer(
     left-side: strong(

@@ -1,5 +1,4 @@
 #import "@preview/codly:0.2.0": *
-#set quote(block: true)
 #let ruby(rt, rb, size: 0.4em, alignment: "between") = {
     let gutter = if (alignment=="center" or alignment=="start") {h(0pt)} else if (alignment=="between" or alignment=="around") {h(1fr)}
     let chars = if(alignment=="around") {
@@ -60,8 +59,9 @@ let x = 4;
 let PATTERN = EXPRESSION;
 ```
 
-右辺の整数リテラル4は、式である。
-その式が返却する値が4であり、左辺のパターン`x`に当てはめて束縛される。
+整数リテラル4単体であっても、右辺は式である。
+式が返却する値は4であり、左辺のパターン`x`に当てはめて束縛される。
+
 パターンであるという認識はとても重要で、以下はエラーにならない。
 ```rust
 let (a, b) = (4, 5);

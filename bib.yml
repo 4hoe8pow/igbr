@@ -1,9 +1,9 @@
-jaka:
+internet:
     type: Web
-    title: カバディとは
-    author: 一般社団法人日本カバディ協会
-    url: https://www.jaka.jp/
-    date: 2023-11-02
+    title: インターネットの仕組み
+    author: 総務省
+    url: https://www.soumu.go.jp/main_sosiki/cybersecurity/kokumin/basic/basic_service_02.html
+    date: 2023-03-16
 
 harry:
     type: Book

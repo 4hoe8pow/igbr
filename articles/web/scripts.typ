@@ -1,6 +1,4 @@
 #import "@preview/codly:0.2.0": *
-#set quote(block: true)
-
 #let icon(codepoint) = {
   box(
     height: 0.8em,

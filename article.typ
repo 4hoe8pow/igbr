@@ -50,6 +50,13 @@
 #include "articles/database/sql.typ"
 #include "articles/database/nosql.typ"
 
+= Network Infrastructure
+#include "articles/infra/internet.typ"
+#include "articles/infra/data.typ"
+
+= Hardware
+#include "articles/computer/pc.typ"
+
 = Technical Writing
 #include "articles/technical-writing/sakubun.typ"
 
