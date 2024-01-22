@@ -31,6 +31,9 @@
 #include "articles/algo/backtracking.typ"
 #include "articles/algo/dp.typ"
 
+= Data Analytics
+#include "articles/data-science/analytics.typ"
+
 = Quality Control
 #include "articles/tdd/test.typ"
 
